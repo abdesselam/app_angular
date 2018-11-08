@@ -8,7 +8,15 @@ import { FormsModule } from '@angular/forms';
 import { AuthComponent } from './auth/auth.component';
 import { AppareilViewComponent } from './appareil-view/appareil-view.component';
 import { AppareilService } from './services/appareil.service';
+import { RouterModule, Routes } from '@angular/router';
 
+
+const appRoutes: Routes = [
+  { path: 'appareils', component: AppareilViewComponent },
+  { path: 'auth', component: AuthComponent },
+  { path: '', component: AppareilViewComponent }
+]; 
+ 
 @NgModule({
   declarations: [
     AppComponent,
